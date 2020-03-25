@@ -1,0 +1,1 @@
+# Function to return the optimizer to train the networks (typically imported from Keras or Pytorch frameworks)
