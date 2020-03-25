@@ -1,4 +1,19 @@
-# Class to design the algorithm to train the network (needed for Pytorch)
+"""
+**Author** : Antonio Garcia Uceda
+
+**Institution** : Erasmus Medical Center
+
+**Position** : PhD student
+
+**Contact** : a.garciauceda@erasmusmc.nl
+
+**Date** : 2020-03-25
+
+**Project** : good_practice
+
+**Class to design the algorithm to train the network (needed for Pytorch)**
+
+"""
 
 
 class Trainer(object):
@@ -16,13 +31,13 @@ class Trainer(object):
 
 
     def _train_epoch(self):
-        "Implement : the series of operations on training data on each epoch"
+        """Implement : the series of operations on training data on each epoch"""
 
     def _validation_epoch(self):
-        "Implement : the series of operations on validation data on each epoch"
+        """Implement : the series of operations on validation data on each epoch"""
 
     def _run_epoch(self):
-        "Implement : the series of operations during one epoch of training (including train and validation data)"
+        """Implement : the series of operations during one epoch of training (including train and validation data)"""
 
 
     def train(self, train_data_generator,
@@ -30,11 +45,11 @@ class Trainer(object):
               max_steps_epoch= None,
               valid_data_generator= None,
               initial_epoch= 0):
-        "Implement : the algorithm to train the network"
+        """Implement : the algorithm to train the network"""
 
 
     def predict(self, test_data_generator):
-        "Implement : compute prediction from trained model"
+        """Implement : compute prediction from trained model"""
 
 
     def _run_callbacks(self):

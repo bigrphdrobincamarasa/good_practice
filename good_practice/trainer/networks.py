@@ -1,15 +1,30 @@
-# Class to generate the neural network of choice
+"""
+**Author** : Antonio Garcia Uceda
+
+**Institution** : Erasmus Medical Center
+
+**Position** : PhD student
+
+**Contact** : a.garciauceda@erasmusmc.nl
+
+**Date** : 2020-03-25
+
+**Project** : good_practice
+
+**Class to generate the neural network of choice**
+
+"""
 
 
 class Network(object):
-    "Abstract class : with virtual functions to be overloaded"
+    """Abstract class : with virtual functions to be overloaded"""
 
     def __init__(self, size_image,
                  num_channels_in,
                  num_classes_out,
                  num_featmaps_in,
                  isUse_valid_convols=False):
-        "Implement : constructor"
+        """Implement : constructor"""
         self.size_image      = size_image
         self.num_channels_in = num_channels_in
         self.num_classes_out = num_classes_out
@@ -29,7 +44,7 @@ class Network(object):
         return [self.num_classes_out] + list(self.size_output)
 
     def preprocess(self, *args, **kwargs):
-        "Implement : if needed, any operation prior to building the model (for tailored networks)"
+        """Implement : if needed, any operation prior to building the model (for tailored networks)"""
         pass
 
     def get_size_output_valid(self, size_input):
@@ -61,7 +76,7 @@ class Unet3D(Network):
 
 
     def get_size_output_valid(self, size_input):
-        "Implement: obtain the output size from whichever input size, when using valid convolutions in the network"
+        """Implement: obtain the output size from whichever input size, when using valid convolutions in the network"""
         pass
 
     def build_model(self):
